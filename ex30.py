@@ -24,7 +24,7 @@ else: # runs code if first comparison was false
 	print "Fine, let's stay home then." # prints a string
 
 
-if trucks < people or cars:
+if trucks > people or cars:
 	print "\nI am a big truck."
 else:
-	print "\nMaybe I am not a big truck."
+	print "\nMaybe I am not a big truck. The people and cars will not fit in me."
