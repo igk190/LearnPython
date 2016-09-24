@@ -73,7 +73,9 @@ def next_room():
 	elif "sit" in danger_zone and "chair" in danger_zone:
 		print "You grab a nearby newspaper. You read it."
 		print "WAITAH! WHERE MY CIGARS AT!"
-		exit(0)
+		exit()
+	else:
+		dead("Oh no, you tripped, fell in the fountain and drowned.")
 
 
 def dead(why):
