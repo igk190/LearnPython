@@ -1,6 +1,6 @@
 import time
 numbers = []
-b = 47
+b = 54
 
 def adding_up(x):
 	i = 0
@@ -17,8 +17,6 @@ def adding_up(x):
 
 
 adding_up(6)
-
-
 
 
 def adding_up_again(x):
