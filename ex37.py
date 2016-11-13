@@ -1,6 +1,5 @@
 import random
 
-
 keywords = {
 
 	"and": "Logical and.",
@@ -37,25 +36,29 @@ keywords = {
 
 }
 
-randomkeyword = random.choice(keywords.keys())
-
-values = keywords.get(randomkeyword)
-print "This is a test. Guess the keyword. The description is: "
-print values
-
 def do_test():
-	while True:
+	testy = True
+	randomkeyword = random.choice(keywords.keys())
+
+
+	values = keywords.get(randomkeyword)
+	print "Guess the keyword! The description is: ", values
+
+	while testy:
 		guess = raw_input("Guess the word: ")
 		if guess == randomkeyword:
-			print "Correct guess. The keyword is %s" % randomkeyword
-			break
+			print "Correct guess, the keyword is \"%s\"\n" % randomkeyword
+			del keywords[randomkeyword]
+			bla = False
+
 			do_test()
+
 		else:
 			print "Try again."
 
 do_test()
 
-##
+
 
 
 
