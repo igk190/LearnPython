@@ -1,6 +1,6 @@
 #from random import randint # do we need this? in THIS file?neee
 from scenes import *
-from game import * 
+from game import *
 
 class Map(object):
 
