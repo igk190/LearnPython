@@ -1,23 +1,7 @@
 from sys import exit
 from random import randint
 
-#from player import Player
-
-
-class Engine(object):
-
-	def __init__(self, scene_map):
-
-		self.scene_map = scene_map
-
-	def play(self):
-
-		current_scene = self.scene_map.opening_scene()
-		print "Play first scene:", current_scene
-
-		while True:
-			current_scene = self.scene_map.next_scene(current_scene.enter())
-
+import items, enemies, actions # or 'from .. import all'
 
 
 
@@ -31,7 +15,7 @@ class Scene(object):
 class DeUB(Scene):
 
 	def enter(self):
-		print "Test"
+		print "Test scene 1"
 		exit(1)
 
 
