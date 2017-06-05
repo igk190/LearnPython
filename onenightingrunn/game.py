@@ -4,7 +4,7 @@ from random import randint
 from player import Player
 
 
-class Engine(object):   # check play function
+class Engine(object):
 
 	def __init__(self, scene_map):
 
