@@ -1,7 +1,7 @@
 from sys import exit
 from random import randint
 
-import items, enemies, actions # or 'from .. import all'
+import items, enemies, actions
 
 
 

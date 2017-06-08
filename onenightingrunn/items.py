@@ -20,7 +20,7 @@ class Weapon(Item):
 
 	def __init__(self, name, description, value, damage):
 		self.damage = damage
-		super().__init__(name, description, value)
+		super(Weapon, self).__init__(name, description, value)
 		# check Zed's explanation
 
 	def __str__(self):
@@ -34,7 +34,7 @@ class Weapon(Item):
 class Rock(Weapon):
 
 	def __init__(self):
-		super().__init__(name="Rock",
+		super(Rock, self).__init__(name="Rock",
 						description="A first-sized rock, suitable for bludgeoning.",
 						value=0,
 						damage=5)
@@ -43,7 +43,7 @@ class Rock(Weapon):
 class Dagger(Weapon):
 
 	def __init__(self):
-		super().__init__(name="Dagger",
+		super(Dagger, self).__init__(name="Dagger",
 						description="A small dagger with some rust. Somewhwat more dangerous than a rock.",
 						value=10,
 						damage=10)
@@ -52,8 +52,8 @@ class Dagger(Weapon):
 class Gold(Item):
 
 	def __init__(self, amt):
-		self.amt = amt
-		super().__init__(name="Gold",
+		self.amt = 6
+		super(Gold, self).__init__(name="Gold",
 						description="A round coin with {} stamped on the front.".format(str(self.amt)),
 						value=self.amt)
 
