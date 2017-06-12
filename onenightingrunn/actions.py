@@ -14,12 +14,12 @@ class Action(object):
 		:param hotkey: the keyboard key the player should use to initiate this action
 		"""
 		self.method = method
-		self.hotkey = hotkey
 		self.name = name
-		self.kwargs = kwargs  # whutt
+		self.hotkey = hotkey
+		self.kwargs = kwargs  # ?
 
 	def __str__(self):
-		return "{}: {}".format(self.hotkey, self.name) # whutt
+		return "%s: %s" % (self.hotkey, self.name)
 
 
 class ViewInventory(Action):
@@ -33,11 +33,4 @@ class Attack(Action):
 	def __init__(self, enemy):
 		super().__init__(method=Player.attack, name="Attack", hotkey='a', enemy=enemy)
 
-
-# We might be able to ommit the below.
-class Flee(Action):
-
-	def __init__(self, title):
-		super().__init__(method=Player.flee, name="Flee", hotkey='f', tile=tile)
-	# FIX TILE at end of above
-
+# Ommitted Flee(Action)

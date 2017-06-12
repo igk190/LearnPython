@@ -16,8 +16,11 @@ class Enemy(object):
 		return self.hp > 0
 
 
-class Henk(Enemy):
+class Heaumeau(Enemy):
 	def __init__(self):
-		super().__init__(name="Henk", hp=10, damage=2)
+		super().__init__(name="Heaumeau", hp=10, damage=2)
 
-# and one more class for each enemy like that
+class Kabouter(Enemy):
+	def __init__(self):
+		super().__init__(name="Kabouter", hp=10, damage=2)
+# and another class for each enemy like that

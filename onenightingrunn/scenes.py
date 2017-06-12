@@ -11,12 +11,28 @@ class Scene(object):
 		print "This scene is not yet configured. Subclass it and implement enter()."
 		exit(1)
 
+	def modify_player(self, the_player):
+		"""Process actions that change the state of the player"""
+		raise NotImplementedError()
+
+	def available_actions(self): #unsure if needed
+		"""Returns all of the available actions in this room."""
+		moves = self.adjacent_moves()
+		moves.append(actions.ViewInventory())
+
+		return moves
+
+
 
 class DeUB(Scene):
 
 	def enter(self):
 		print "Test scene 1"
 		exit(1)
+
+	def modify_player(self, the_player):
+		# Room has no action on player
+		pass
 
 
 class Mitra(Scene):

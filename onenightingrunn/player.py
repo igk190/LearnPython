@@ -37,4 +37,3 @@ class Player(object):
 		else:
 			print "{} HP is {}.".format(enemy.name, enemy.hp)
 
-
