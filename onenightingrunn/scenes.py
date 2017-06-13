@@ -7,7 +7,8 @@ import items, enemies, actions
 
 class Scene(object):
 
-	def enter(self): # intro_text
+	def enter(self): #  == intro_text
+		"""Information to be displayed when the player moves into the Scene."""
 		print "This scene is not yet configured. Subclass it and implement enter()."
 		exit(1)
 
@@ -15,9 +16,9 @@ class Scene(object):
 		"""Process actions that change the state of the player"""
 		raise NotImplementedError()
 
-	def available_actions(self): #unsure if needed
+	def available_actions(self):
 		"""Returns all of the available actions in this room."""
-		moves = self.adjacent_moves()
+		moves = []   # ? we're not using adjacent_moves
 		moves.append(actions.ViewInventory())
 
 		return moves
@@ -27,10 +28,11 @@ class Scene(object):
 class DeUB(Scene):
 
 	def enter(self):
-		print "Test scene 1"
-		exit(1)
+		print "TEST: De UB."
+		#exit(1)
+		#return 'hotel_joe'
 
-	def modify_player(self, the_player):
+	def modify_player(self, player):
 		# Room has no action on player
 		pass
 
@@ -44,7 +46,15 @@ class Mitra(Scene):
 class HotelJoe(Scene):
 
 	def enter(self):
-		pass
+		print "hotel joe"
+
+		print "Oh no, too many books!"
+		print "The pressure to read 'm all is too large."
+		print "You die of a heart attack."
+		#exit(1)
+
+	def modify_player(self, player):
+		player.hp = 0
 
 
 class BrokenSpeakers(Scene):
