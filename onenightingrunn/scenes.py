@@ -7,7 +7,7 @@ import items, enemies, actions
 
 class Scene(object):
 
-	def enter(self):
+	def enter(self): # intro_text
 		print "This scene is not yet configured. Subclass it and implement enter()."
 		exit(1)
 

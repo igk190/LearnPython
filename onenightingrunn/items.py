@@ -9,7 +9,7 @@ class Item(object):
 		self.value = value
 
 	def __str__(self): # str?
-		return "{}\n=====\n{}\nValue: {}\n".format(
+		return "%s\n=====\n%s\nValue: %s\n" % (
 			self.name,
 			self.description,
 			self.value
@@ -24,7 +24,7 @@ class Weapon(Item):
 		# check Zed's explanation
 
 	def __str__(self):
-		return "{}\n=====\n{}\nValue: {}\nDamage: {}".format(
+		return "%s\n=====\n%s\nValue: %s\nDamage: %s" % (
 			self.name,
 			self.description,
 			self.value,

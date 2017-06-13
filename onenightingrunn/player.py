@@ -7,7 +7,6 @@ class Player(object):
 	def __init__(self):
 		self.inventory = [items.Gold(15), items.Rock()]
 		self.hp = 100
-		self.victory = False
 
 	def is_alive(self):
 		return self.hp > 0
@@ -30,10 +29,10 @@ class Player(object):
 					max_dmg = i.damage
 					best_weapon = i
 
-		print "You use {} against {}!".format(best_weapon.name, enemy.name)
+		print "You use %s against %s!" % (best_weapon.name, enemy.name)
 		enemy.hp -= best_weapon.damage
 		if not enemy.is_alive():
-			print "You killed {}!".format(enemy.name)
+			print "You killed %s!" % (enemy.name)
 		else:
-			print "{} HP is {}.".format(enemy.name, enemy.hp)
+			print "%s HP is %s." % (enemy.name, enemy.hp)
 
